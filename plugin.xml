@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Sample Category"
+            id="com.connor.hx3.plm.commands.category">
+      </category>
+      
+      <!-- 定义commond    新建项目!-->
+     <command name="标准APQP流程(全)" id="APQP_QUAN"> </command>
+     <command name="标准APQP流程(工装样件)" id="APQP_GZYJ"> </command>
+     <command name="后市场APQP流程(提交PPAP全新项目)" id="APQP_HSCPPAP"> </command>
+     <command name="后市场APQP流程(提交PPAP改型项目)" id="APQP_HSCPPAP_1"> </command>
+     <command name="后市场APQP流程(无需PPAP全新项目)" id="APQP_HSC"> </command>
+     <command name="后市场APQP流程(无需PPAP改型项目)" id="APQP_HSC_1"> </command>
+     <command name="后市场APQP流程(自制零件全新项目)" id="APQP_HSCZZ"> </command>
+     <command name="后市场APQP流程(自制零件改型项目)" id="APQP_HSCZZ_1"> </command>
+     <command name="后市场APQP(外购零件)" id="APQP_HSCWG"> </command>
+     <command name="精密冲压APQP流程" id="APQP_JMCY"> </command>
+     
+     <command name="液压轴承APQP流程(提交PPAP全新项目)" id="APQP_YYZC_T_QX"> </command>
+     <command name="液压轴承APQP流程(提交PPAP改型项目)" id="APQP_YYZC_T_GX"> </command>
+     <command name="液压轴承APQP流程(无需PPAP全新项目)" id="APQP_YYZC_W_QX"> </command>
+     <command name="液压轴承APQP流程(无需PPAP改型项目)" id="APQP_YYZC_W_GX"> </command>
+     <command name="直接采购现有产品APQP流程" id="APQP_ZJCGXYCP"> </command>
+      
+      <!-- 定义commond    报表!-->
+      
+       <command name="问题统计" id="HXOM027_WTTJ"> </command>
+       <command name="客户代号/本厂编码对照统计" id="HXOM030_KHDH"> </command>
+       <command name="图纸外发统计表" id="HXOM029_TZWF"> </command>
+      
+      <!-- 定义commond    评审点管理!-->
+      <command name="项目问题统计" id="HXOM016_XMWTTJ"> </command>
+      <command name="交付件点检" id="HXOM015_JFJDJ"> </command>
+      
+      <command name="计划和确定项目阶段评审(液压轴承)" id="HX3_DYJDPS_YY"> </command>
+      <command name="设计输入评审表(液压轴承)" id="HX3_SJSRPS_YY"> </command>
+      <command name="设计输出评审表(液压轴承)" id="HX3_SJSCPS_YY"> </command>
+      <command name="设计验证评审表(液压轴承)" id="HX3_SJYZPS_YY"> </command>
+      <command name="产品开发阶段评审报告(液压轴承)" id="HX3_DEJDPS_YY"> </command>
+       <command name="过程设计和开发阶段评审报告(液压轴承)" id="HX3_DSJDPS_YY"> </command>
+      <command name="产品过程生产确认评审报告(液压轴承)" id="HX3_CPGCSCQR_YY"> </command>
+      <command name="产品和过程确认阶段评审报告(液压轴承)" id="HX3_DSIJDPS_YY"> </command>
+      <command name="产品和过程确认阶段评审报告" id ="HX3_CPGCQRJDPS"></command>
+      <command name="项目定点评审报告(液压轴承)" id="HX3_XMDDPS_YY"> </command>
+      <command name="OTS送样评审报告(液压轴承)" id="HX3_OTSYJPS_YY"> </command>
+       <command name="项目移交评审报告(液压轴承)" id="HX3_XMYJPS_YY"> </command>
+      
+      
+      <!-- 定义commond    变更!-->
+       <command name="工程更改申请单" id="HX3_GCGGSQD"> </command>
+       <command name="工程更改通知单" id="HX3_GCGGTZD"> </command>
+       <command name="工程更改评审单" id="HX3_GCGGPSBG"> </command>
+       
+      <!-- 定义commond    APQP文档!-->
+      
+      <command id="HX3_CPSJYZSRB" name="设计参数输入表"> </command>
+      
+      	
+		<command id="HX3_QTSRWJ_FL" name="其他输入文件(如飞轮图纸等)"> </command>
+		<command id="HX3_GKTSYQQD" name="顾客特殊要求清单"> </command>
+		<command id="HX3_YWJH" name="业务计划"> </command>
+		<command id="HX3_XMQDRWS" name="项目启动任务书"> </command>
+		<command id="HX3_CNPZYCKHQR" name="产能配置预测客户确认"> </command>
+		<command id="HX3_QQZLCHZLMB" name="前期质量策划质量目标"> </command>
+		<command id="HX3_XCPCBCXBG" name="新产品初步查询报告"> </command>
+		<command id="HX3_CPGCSX" name="产品过程设想"> </command>
+		<command id="HX3_SJRWS" name="设计任务书"> </command>
+		<command id="HX3_CSCLQD" name="产品初始材料清单"> </command>
+		<command id="HX3_GCLCT" name="过程流程图"> </command>
+		
+		<command id="HX3_CPKFKXXFXBG" name="新产品开发可行性分析报告"> </command>
+		<command id="HX3_CPBJD" name="产品报价单"> </command>
+		<command id="HX3_XMDDPSBG" name="项目定点评审报告"> </command>
+		<command id="HX3_CPKFJSXY" name="产品开发技术协议"> </command>
+		<command id="HX3_DFXZJGT" name="多方小组机构图"> </command>
+		<command id="HX3_DFXZZRJZB" name="多方小组责任矩阵表"> </command>
+		<command id="HX3_XCPKFJH" name="新产品开发进度计划"> </command>
+		<command id="HX3_KFJHBGPZB" name="新产品开发计划变更批准表"> </command>
+		<command id="HX3_CPNJXKKXMB" name="产品耐久性可靠性目标"> </command>
+		<command id="HX3_CPGCTSXQD" name="产品和过程特殊特性清单"> </command>
+		<command id="HX3_CPBZJH" name="产品保证计划"> </command>
+		<command id="HX3_JHQDXMJDPS" name="计划和确定项目阶段评审报告"> </command>
+		<command id="HX3_HYJY" name="会议纪要"> </command>
+		<command id="HX3_SJSRPSB" name="设计输入评审表"> </command>
+		<command id="HX3_KFSJBGSPB" name="新产品开发设计变更审批表"> </command>
+		<command id="HX3_DFMEA" name="DFMEA"> </command>
+		<command id="HX3_DFMEAJCB" name="设计FMEA检查表"> </command>
+		<command id="HX3_DVSJYZJH" name="DV设计验证计划"> </command>
+		<command id="HX3_SJSCPSB" name="设计输出评审表"> </command>
+		<command id="HX3_XSBGZHSSQD" name="新设备工装和设施清单"> </command>
+		<command id="HX3_XSBGZSBJCB" name="新设备工装和试验设备检查表"> </command>
+		<command id="HX3_GFPTQD" name="供方配套清单"> </command>
+		<command id="HX3_SYYLJLYSQD" name="技术部试样用零件领用采购申请单"> </command>
+		<command id="HX3_SCSBQD" name="生产设备清单"> </command>
+		<command id="HX3_SJXXJCB" name="设计信息检查表"> </command>
+		<command id="HX3_SJYZPSB" name="设计验证评审表"> </command>
+		<command id="HX3_YPYQSZSCJL" name="样品客户要求及试制生产记录"> </command>
+		<command id="HX3_CPKFJDPSBG" name="产品开发阶段评审报告"> </command>
+		<command id="HX3_GFZJBG" name="供方自检报告"> </command>
+		<command id="HX3_LJJJSYSBQD" name="量具检具试验设备清单"> </command>
+		<command id="HX3_JYZDS" name="检验指导书"> </command>
+		<command id="HX3_ZCJCBG" name="总成检测报告"> </command>
+		<command id="HX3_XNJCBG" name="性能检测报告"> </command>
+		<command id="HX3_YCLWGJJYD" name="原材料外购(包)件检验单    "> </command>
+		<command id="HX3_GYSTGCZBG" name="供应商提供的材质报告"> </command>
+		<command id="HX3_XSSYJCBG" name="型式试验检测报告"> </command>
+		<command id="HX3_PVSJYZJH" name="PV设计验证计划"> </command>
+		<command id="HX3_BMJH" name="备模计划"> </command>
+		<command id="HX3_PFMEA" name="PFMEA"> </command>
+		<command id="HX3_PFMEAJCB" name="过程FMEA检查表"> </command>
+		<command id="HX3_KZJH" name="控制计划"> </command>
+		<command id="HX3_KZJHJCB" name="控制计划检查表"> </command>
+		<command id="HX3_GYZBJJMXB" name="专用工艺装备组合夹具明细表"> </command>
+		<command id="HX3_GZYSD" name="工装验收单"> </command>
+		<command id="HX3_YPGCJYBG" name="样品过程检验报告"> </command>
+		<command id="HX3_SJYZPSB" name="设计验证评审表"> </command>
+		<command id="HX3_OTSSYPSBG" name="OTS送样评审报告"> </command>
+		<command id="HX3_SYCDLCSPJBZ" name="整车道路主观评价表"> </command>
+		<command id="HX3_GCLCTJCB" name="过程流程图检查表"> </command>
+		<command id="HX3_CDBXRWS" name="场地布线任务书"> </command>
+		<command id="HX3_CDPMBZTJCB" name="场地平面布置图检查表"> </command>
+		<command id="HX3_MSAJH" name="MSA计划"> </command>
+		<command id="HX3_CSGCNLYJJH" name="初始过程能力研究计划"> </command>
+		<command id="HX3_CPGCZLJCB" name="产品过程质量检查表"> </command>
+		<command id="HX3_GCSJKFJDPS" name="过程设计和开发阶段评审报告"> </command>
+		<command id="HX3_JJJCBG" name="检具检测报告"> </command>
+		<command id="HX3_JLD" name="商务调价报告"> </command>
+		<command id="HX3_FKJLD" name="反馈记录单"> </command>
+		<command id="HX3_CDPMBZT" name="场地平面布置图"> </command>
+		<command id="HX3_CNGH" name="产能规划"> </command>
+		<command id="HX3_CPGCSCQRPS" name="产品过程生产确认评审报告"> </command>
+		<command id="HX3_ZCPPBG" name="整车匹配报告"> </command>
+		<command id="HX3_PPAPTJQD" name="PPAP提交清单"> </command>
+		<command id="HX3_LJTJBZS" name="零件提交保证书(PSW)"> </command>
+		<command id="HX3_CPZLCHZJRD" name="产品质量策划总结和认定"> </command>
+		
+		<command id="HX3_MSAPJBG" name="MSA评价报告"> </command>
+		<command id="HX3_CSGCNLYJBG" name="初始过程能力研究报告"> </command>
+		<command id="HX3_CLSYJG" name="材料试验结果"> </command>
+		<command id="HX3_CCCLJG" name="尺寸测量结果"> </command>
+		<command id="HX3_XNSYJG" name="性能试验结果"> </command>
+		<command id="HX3_SSCFXBG" name="试生产分析报告"> </command>
+		<command id="HX3_XMJSZJHYJL" name="项目结束总结会议记录"> </command>
+		<command id="HX3_XMYJPSBG" name="项目移交评审报告"> </command>
+      	<command id="HX3_BZPJB" name="包装评价表"> </command>
+      
+      	<command id="OtherDwg" name="新建其他图纸"> </command>
+      	<command id="BomExchange" name="设计BOM转物料BOM"> </command>
+      	<command id="HX_GetDB" name="更新项目看板数据"> </command>
+      	<command id="HX3_GYLX" name="新建工艺路线"> </command>
+      	<command id="HX_QTXJC" name="项目齐套性检查"> </command>
+      	
+      	<command id="HX3_XXM" name="新建项目"> </command>
+      	<command id="HX3_SJFFDX" name="新建图纸下发/外发清单"> </command>
+      	<command id="HX3_WTD" name="新建问题点"> </command>
+      	<command id="Test_GYT" name="创建工艺图"> </command>
+      	<command id="EXPORT_BG_REPORT" name="导出变更报表"> </command>
+      	<command id="EXPORT_TZXF_REPORT" name="下发图纸报表"> </command>
+      	<command id="HISTORY_FILE_COMMAND" name="历史数据归档"> </command>
+      	<command id="HX3_YCLMXB" name="精密冲压原材料明细表"> </command>
+      	<command id="HX3_JLJYJLB" name="进料检验记录表"> </command>
+      	<command id="HX3_CSCQMXJCJL" name="CSC气密性检测记录表"> </command>
+      	<command id="HX3_CSCPLSYJLB" name="CSC疲劳试验记录表"> </command>
+      	
+      	<command id="ClassReportCommand" name="更新数据库"> </command>
+      	
+   </extension>
+   <extension point="org.eclipse.ui.handlers">
+   
+   	<handler class="com.connor.hx3.plm.hxom042.ClassReportHandler" commandId="ClassReportCommand"> </handler>
+   
+   	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_JLJYJLB"> </handler>
+    <handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CSCQMXJCJL"> </handler>
+    <handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CSCPLSYJLB"> </handler>
+    <handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_YCLMXB"> </handler>
+ 
+    <handler class="com.connor.hx3.plm.hxom039.FileHandler" commandId="HISTORY_FILE_COMMAND"> </handler>
+  
+    <handler class="com.connor.hx3.plm.hxom041.ReportHandler" commandId="EXPORT_TZXF_REPORT"> </handler>
+  
+   <handler class="com.connor.hx3.plm.hxom028.BGReportHandler" commandId="EXPORT_BG_REPORT"> </handler>
+  
+   <handler class="com.connor.hx3.plm.test.TestHandler" commandId="Test_GYT"> </handler>
+  
+     
+   <handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CPSJYZSRB"> </handler>
+  
+   <handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_WTD"> </handler>
+   <handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_SJFFDX"> </handler>
+	
+   	<handler class="com.connor.hx3.plm.hxom018.QTXHandler" commandId="HX_QTXJC"> </handler>
+    
+   
+   	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_GYLX"> </handler>
+    
+   
+    <handler class="com.connor.hx3.plm.proj.HXGetDBMsg" commandId="HX_GetDB"> </handler>
+    
+    <handler commandId="BomExchange" class="com.connor.hx3.plm.hxom011.Hxom011Handler"> </handler>
+   
+    <handler commandId="OtherDwg" class="com.connor.hx3.plm.hxom002.AutocodeHandler"> </handler>
+   
+         
+      <!-- 定义Handler    评审点管理!-->
+      <handler commandId="HXOM016_XMWTTJ" class="com.connor.hx3.plm.hxom016.ProblemFormHandler"> </handler>
+      <handler commandId="HXOM015_JFJDJ" class="com.connor.hx3.plm.hxom015.PsdHandler"> </handler>
+      <handler commandId="HX3_JHQDXMJDPS" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+      <handler commandId="HX3_SJSRPSB" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+      <handler commandId="HX3_SJSCPSB" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+	  <handler commandId="HX3_SJYZPSB" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+	  <handler commandId="HX3_CPKFJDPSBG" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+	  <handler commandId="HX3_GCSJKFJDPS" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+	  <handler commandId="HX3_CPGCSCQRPS" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+	  <handler commandId="HX3_CPGCQRJDPS" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+	  <handler commandId="HX3_XMDDPSBG" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+	  <handler commandId="HX3_OTSSYPSBG" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+	  <handler commandId="HX3_XMYJPSBG" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+	 
+	 <handler commandId="HX3_DYJDPS_YY" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+	 <handler commandId="HX3_SJSRPS_YY" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+	 <handler commandId="HX3_SJSCPS_YY" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+	 <handler commandId="HX3_SJYZPS_YY" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+	 <handler commandId="HX3_DEJDPS_YY" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+	 <handler commandId="HX3_DSJDPS_YY" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+	 <handler commandId="HX3_CPGCSCQR_YY" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+	 <handler commandId="HX3_DSIJDPS_YY" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+	 <handler commandId="HX3_XMDDPS_YY" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+	 <handler commandId="HX3_OTSYJPS_YY" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+	 <handler commandId="HX3_XMYJPS_YY" class="com.connor.hx3.plm.hxomAPQP.CreateHandler"> </handler>
+	  <!-- 定义Handler    变更!-->
+	  <handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_GCGGSQD"> </handler>
+	  <handler class="com.connor.hx3.plm.hxomAPQP.HX3_GCGGTZD" commandId="HX3_GCGGTZD"> </handler>
+	  <handler class="com.connor.hx3.plm.hxomAPQP.HX3_GCGGPSBG" commandId="HX3_GCGGPSBG"> </handler>
+	  
+	  <!-- 定义Handler    APQP!-->
+	  
+	  
+	 <handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_BZPJB"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_QTSRWJ_FL"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_GKTSYQQD"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_YWJH"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_XMQDRWS"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CNPZYCKHQR"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_QQZLCHZLMB"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_XCPCBCXBG"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CPGCSX"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_SJRWS"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CSCLQD"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_GCLCT"> </handler>
+	
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CPKFKXXFXBG"> </handler>
+	
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CPBJD"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CPKFJSXY"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_DFXZJGT"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_DFXZZRJZB"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_XCPKFJH"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_KFJHBGPZB"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CPNJXKKXMB"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CPGCTSXQD"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CPBZJH"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_HYJY"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_KFSJBGSPB"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_DFMEA"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_DFMEAJCB"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_DVSJYZJH"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_XSBGZHSSQD"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_XSBGZSBJCB"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_GFPTQD"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_SYYLJLYSQD"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_SCSBQD"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_SJXXJCB"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_YPYQSZSCJL"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_GFZJBG"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_LJJJSYSBQD"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_JYZDS"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_ZCJCBG"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_XNJCBG"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_YCLWGJJYD"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_GYSTGCZBG"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_XSSYJCBG"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_PVSJYZJH"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_BMJH"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_PFMEA"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_PFMEAJCB"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_KZJH"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_KZJHJCB"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_GYZBJJMXB"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_GZYSD"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_YPGCJYBG"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_SYCDLCSPJBZ"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_GCLCTJCB"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CDBXRWS"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CDPMBZTJCB"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_MSAJH"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CSGCNLYJJH"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CPGCZLJCB"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_JJJCBG"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_JLD"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_FKJLD"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CDPMBZT"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CNGH"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_ZCPPBG"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_PPAPTJQD"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_LJTJBZS"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CPZLCHZJRD"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_MSAPJBG"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CSGCNLYJBG"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CLSYJG"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_CCCLJG"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_XNSYJG"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_SSCFXBG"> </handler>
+	<handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_XMJSZJHYJL"> </handler>
+	  
+	  
+	   <!-- 定义Handler    新建项目!-->
+	   <handler class="com.connor.hx3.plm.hxomAPQP.CreateHandler" commandId="HX3_XXM"> </handler>
+	   
+       <handler commandId="APQP_QUAN" class="com.connor.hx3.plm.hxom004.CreateProductionStructHandler"> </handler>
+       <handler commandId="APQP_GZYJ" class="com.connor.hx3.plm.hxom004.CreateProductionStructHandler"> </handler>
+       <handler commandId="APQP_HSCPPAP" class="com.connor.hx3.plm.hxom004.CreateProductionStructHandler"> </handler>
+       <handler commandId="APQP_HSC" class="com.connor.hx3.plm.hxom004.CreateProductionStructHandler"> </handler>
+       <handler commandId="APQP_HSCWG" class="com.connor.hx3.plm.hxom004.CreateProductionStructHandler"> </handler>
+       <handler commandId="APQP_HSCZZ" class="com.connor.hx3.plm.hxom004.CreateProductionStructHandler"> </handler>
+       <handler commandId="APQP_JMCY" class="com.connor.hx3.plm.hxom004.CreateProductionStructHandler"> </handler>
+       
+       <handler commandId="APQP_HSCPPAP_1" class="com.connor.hx3.plm.hxom004.CreateProductionStructHandler"> </handler>
+       <handler commandId="APQP_HSC_1" class="com.connor.hx3.plm.hxom004.CreateProductionStructHandler"> </handler>
+       <handler commandId="APQP_HSCZZ_1" class="com.connor.hx3.plm.hxom004.CreateProductionStructHandler"> </handler>
+       <handler commandId="APQP_YYZC_T_QX" class="com.connor.hx3.plm.hxom004.CreateProductionStructHandler"> </handler>
+       <handler commandId="APQP_YYZC_T_GX" class="com.connor.hx3.plm.hxom004.CreateProductionStructHandler"> </handler>
+       <handler commandId="APQP_YYZC_W_QX" class="com.connor.hx3.plm.hxom004.CreateProductionStructHandler"> </handler>
+       <handler commandId="APQP_YYZC_W_GX" class="com.connor.hx3.plm.hxom004.CreateProductionStructHandler"> </handler>
+       <handler commandId="APQP_ZJCGXYCP" class="com.connor.hx3.plm.hxom004.CreateProductionStructHandler"> </handler>
+      
+       
+       
+       <!-- 定义Handler    报表!-->
+       <handler commandId="HXOM027_WTTJ"  class="com.connor.hx3.plm.hxom027.ProblemStatisticsHandler"> </handler>
+       <handler commandId="HXOM030_KHDH" class="com.connor.hx3.plm.hxom030.StatisticalReportHandler"> </handler>
+       <handler commandId="HXOM029_TZWF" class="com.connor.hx3.plm.hxom029.TZWFreportHandler"> </handler>
+      
+       
+      
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.connor.hx3.plm.commands.sampleCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+         <menuContribution
+            locationURI="menu:ImportCustomization?after=newCustomizationStart">
+    
+    		<!-- 定义menu    历史数据归档!-->
+    		<command id="com.connor.dataset.test.menus.sampleCommand.HISTORY_FILE_COMMAND" commandId="HISTORY_FILE_COMMAND"> </command>
+
+    	</menuContribution>
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+    
+    <!-- 定义menu    新建APQP文档!-->
+    <menu id="com.connor.hx3.plm.menus.sampleMenu.XJAPQPWD" mnemonic="M" label="新建APQP文档">
+		<menu id="com.connor.hx3.plm.menus.sampleMenu.DYJD" mnemonic="M" label="第一阶段">
+			<menu id="com.connor.hx3.plm.menus.sampleMenu.MYB1" mnemonic="M" label="贸易部">
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CPKFKXXFXBG" commandId="HX3_CPKFKXXFXBG"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_QTSRWJ_FL" commandId="HX3_QTSRWJ_FL"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_GKTSYQQD" commandId="HX3_GKTSYQQD"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_YWJH" commandId="HX3_YWJH"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_XMQDRWS" commandId="HX3_XMQDRWS"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CNPZYCKHQR" commandId="HX3_CNPZYCKHQR"> </command>
+			</menu>
+			<menu id="com.connor.hx3.plm.menus.sampleMenu.PZB1" mnemonic="M" label="品质部">
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_QQZLCHZLMB" commandId="HX3_QQZLCHZLMB"> </command>
+			</menu>
+				<menu id="com.connor.hx3.plm.menus.sampleMenu.JSB1" mnemonic="M" label="技术部">
+				
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CPSJYZSRB" commandId="HX3_CPSJYZSRB"> </command>
+				
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_XCPCBCXBG" commandId="HX3_XCPCBCXBG"> </command>
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CPGCSX" commandId="HX3_CPGCSX"> </command>
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_SJRWS" commandId="HX3_SJRWS"> </command>
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CSCLQD" commandId="HX3_CSCLQD"> </command>
+					
+					
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_YCLMXB" commandId="HX3_YCLMXB"> </command>
+					
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_GCLCT" commandId="HX3_GCLCT"> </command>
+					
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CPBJD" commandId="HX3_CPBJD"> </command>
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_XMDDPSBG" commandId="HX3_XMDDPSBG"> </command>
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CPKFJSXY" commandId="HX3_CPKFJSXY"> </command>
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_DFXZJGT" commandId="HX3_DFXZJGT"> </command>
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_DFXZZRJZB" commandId="HX3_DFXZZRJZB"> </command>
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_XCPKFJH" commandId="HX3_XCPKFJH"> </command>
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_KFJHBGPZB" commandId="HX3_KFJHBGPZB"> </command>
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CPNJXKKXMB" commandId="HX3_CPNJXKKXMB"> </command>
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CPGCTSXQD" commandId="HX3_CPGCTSXQD"> </command>
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CPBZJH" commandId="HX3_CPBZJH"> </command>
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_JHQDXMJDPS" commandId="HX3_JHQDXMJDPS"> </command>
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_HYJY" commandId="HX3_HYJY"> </command>
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_SJSRPSB" commandId="HX3_SJSRPSB"> </command>
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_KFSJBGSPB" commandId="HX3_KFSJBGSPB"> </command>
+					<!-->
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_DFMEA" commandId="HX3_DFMEA"> </command>
+					<command id="com.connor.dataset.test.menus.sampleCommand.HX3_DFMEAJCB" commandId="HX3_DFMEAJCB"> </command>
+					<!-->
+				</menu>
+		</menu>
+		<menu id="com.connor.hx3.plm.menus.sampleMenu.DEJD" mnemonic="M" label="第二阶段">
+			<menu id="com.connor.hx3.plm.menus.sampleMenu.JSB2" mnemonic="M" label="技术部">
+				
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_DFMEA" commandId="HX3_DFMEA"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_DFMEAJCB" commandId="HX3_DFMEAJCB"> </command>
+					
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CPGCTSXQD" commandId="HX3_CPGCTSXQD"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_DVSJYZJH" commandId="HX3_DVSJYZJH"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_SJSCPSB" commandId="HX3_SJSCPSB"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_XSBGZHSSQD" commandId="HX3_XSBGZHSSQD"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_XSBGZSBJCB" commandId="HX3_XSBGZSBJCB"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_GFPTQD" commandId="HX3_GFPTQD"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_SYYLJLYSQD" commandId="HX3_SYYLJLYSQD"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_SCSBQD" commandId="HX3_SCSBQD"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_SJXXJCB" commandId="HX3_SJXXJCB"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_SJYZPSB" commandId="HX3_SJYZPSB"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_YPYQSZSCJL" commandId="HX3_YPYQSZSCJL"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CPKFJDPSBG" commandId="HX3_CPKFJDPSBG"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_HYJY" commandId="HX3_HYJY"> </command>
+			</menu>
+			<menu id="com.connor.hx3.plm.menus.sampleMenu.PZB2" mnemonic="M" label="品质部">
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_GFZJBG" commandId="HX3_GFZJBG"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_LJJJSYSBQD" commandId="HX3_LJJJSYSBQD"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_JYZDS" commandId="HX3_JYZDS"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_ZCJCBG" commandId="HX3_ZCJCBG"> </command>
+				
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_JLJYJLB" commandId="HX3_JLJYJLB"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CSCQMXJCJL" commandId="HX3_CSCQMXJCJL"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CSCPLSYJLB" commandId="HX3_CSCPLSYJLB"> </command>
+				
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_XNJCBG" commandId="HX3_XNJCBG"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_YCLWGJJYD" commandId="HX3_YCLWGJJYD"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_GYSTGCZBG" commandId="HX3_GYSTGCZBG"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_XSSYJCBG" commandId="HX3_XSSYJCBG"> </command>
+			</menu>
+		</menu>
+		
+		<menu id="com.connor.hx3.plm.menus.sampleMenu.DSJD" mnemonic="M" label="第三阶段">
+			<menu id="com.connor.hx3.plm.menus.sampleMenu.JSB3" mnemonic="M" label="技术部">
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_PVSJYZJH" commandId="HX3_PVSJYZJH"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_BMJH" commandId="HX3_BMJH"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_PFMEA" commandId="HX3_PFMEA"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_PFMEAJCB" commandId="HX3_PFMEAJCB"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_GFPTQD" commandId="HX3_GFPTQD"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_SYYLJLYSQD" commandId="HX3_SYYLJLYSQD"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_KZJH" commandId="HX3_KZJH"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_KZJHJCB" commandId="HX3_KZJHJCB"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_GYZBJJMXB" commandId="HX3_GYZBJJMXB"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_GZYSD" commandId="HX3_GZYSD"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_YPGCJYBG" commandId="HX3_YPGCJYBG"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_SJYZPSB" commandId="HX3_SJYZPSB"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_YPYQSZSCJL" commandId="HX3_YPYQSZSCJL"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_OTSSYPSBG" commandId="HX3_OTSSYPSBG"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_SYCDLCSPJBZ" commandId="HX3_SYCDLCSPJBZ"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_GCLCT" commandId="HX3_GCLCT"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_GCLCTJCB" commandId="HX3_GCLCTJCB"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_KZJH" commandId="HX3_KZJH"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_KZJHJCB" commandId="HX3_KZJHJCB"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CDBXRWS" commandId="HX3_CDBXRWS"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CDPMBZTJCB" commandId="HX3_CDPMBZTJCB"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_MSAJH" commandId="HX3_MSAJH"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CSGCNLYJJH" commandId="HX3_CSGCNLYJJH"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CPGCZLJCB" commandId="HX3_CPGCZLJCB"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_GCSJKFJDPS" commandId="HX3_GCSJKFJDPS"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_HYJY" commandId="HX3_HYJY"> </command>
+			</menu>
+			<menu id="com.connor.hx3.plm.menus.sampleMenu.PZB3" mnemonic="M" label="品质部">
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_JJJCBG" commandId="HX3_JJJCBG"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_XSSYJCBG" commandId="HX3_XSSYJCBG"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_ZCJCBG_2" commandId="HX3_ZCJCBG"> </command>
+				
+			</menu>
+			<menu id="com.connor.hx3.plm.menus.sampleMenu.YWB3" mnemonic="M" label="业务部">
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_JLD" commandId="HX3_JLD"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_FKJLD" commandId="HX3_FKJLD"> </command>
+			</menu>
+			<menu id="com.connor.hx3.plm.menus.sampleMenu.ZZB3" mnemonic="M" label="制造部">
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CDPMBZT" commandId="HX3_CDPMBZT"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CNGH" commandId="HX3_CNGH"> </command>
+			</menu>
+		</menu>
+		<menu id="com.connor.hx3.plm.menus.sampleMenu.DSIJD" mnemonic="M" label="第四阶段">
+			<menu id="com.connor.hx3.plm.menus.sampleMenu.MYB4" mnemonic="M" label="贸易部">
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_BZPJB" commandId="HX3_BZPJB"> </command>
+			</menu>
+			<menu id="com.connor.hx3.plm.menus.sampleMenu.JSB4" mnemonic="M" label="技术部">
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CPGCSCQRPS" commandId="HX3_CPGCSCQRPS"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_GCLCT" commandId="HX3_GCLCT"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_KZJH" commandId="HX3_KZJH"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_ZCPPBG" commandId="HX3_ZCPPBG"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_PPAPTJQD" commandId="HX3_PPAPTJQD"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_LJTJBZS" commandId="HX3_LJTJBZS"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CPZLCHZJRD" commandId="HX3_CPZLCHZJRD"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CPGCQRJDPS" commandId="HX3_CPGCQRJDPS"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_HYJY" commandId="HX3_HYJY"> </command>
+			</menu>
+			<menu id="com.connor.hx3.plm.menus.sampleMenu.PZB4" mnemonic="M" label="品质部">
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_MSAPJBG" commandId="HX3_MSAPJBG"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CSGCNLYJBG" commandId="HX3_CSGCNLYJBG"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CLSYJG" commandId="HX3_CLSYJG"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_CCCLJG" commandId="HX3_CCCLJG"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_XNSYJG" commandId="HX3_XNSYJG"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_PPAPTJQD" commandId="HX3_PPAPTJQD"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_LJTJBZS" commandId="HX3_LJTJBZS"> </command>
+			</menu>
+			<menu id="com.connor.hx3.plm.menus.sampleMenu.ZZB4" mnemonic="M" label="制造部">
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_SSCFXBG" commandId="HX3_SSCFXBG"> </command>
+			</menu>
+			</menu>
+		<menu id="com.connor.hx3.plm.menus.sampleMenu.DWJD" mnemonic="M" label="第五阶段">
+			<menu id="com.connor.hx3.plm.menus.sampleMenu.JSB5" mnemonic="M" label="技术部">
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_XMJSZJHYJL" commandId="HX3_XMJSZJHYJL"> </command>
+				<command id="com.connor.dataset.test.menus.sampleCommand.HX3_XMYJPSBG" commandId="HX3_XMYJPSBG"> </command>
+			</menu>
+		</menu>
+	</menu>
+
+           <!-- 定义menu    变更管理!-->
+           <menu label="变更管理"
+               mnemonic="M"
+               id="com.connor.hx3.plm.menus.sampleMenu">
+          	   <command commandId="HX3_GCGGSQD" id="com.connor.dataset.test.menus.sampleCommand.HX3_GCGGSQD"> </command>
+          	   <command commandId="HX3_GCGGTZD" id="com.connor.dataset.test.menus.sampleCommand.HX3_GCGGTZD"> </command>
+               <command commandId="HX3_GCGGPSBG" id="com.connor.dataset.test.menus.sampleCommand.HX3_GCGGPSBG"> </command>
+        </menu>  
+        
+          <!-- 定义menu    新建项目!-->
+          <menu label="项目管理"
+               mnemonic="M"
+               id="com.connor.hx3.plm.menus.newproj_id">
+               
+               	<command commandId="HX3_XXM" id="com.connor.dataset.test.menus.sampleCommand.HX3_XXM"> </command>
+               
+               <menu
+               		label="通过APQP模板新建产品"
+              		mnemonic="M"
+               		id="com.connor.hx3.plm.menus.sampleMenu.APQP">
+                	<command commandId="APQP_QUAN" id="com.connor.dataset.test.menus.sampleCommand.APQP_QUAN"> </command>
+             	  	<command commandId="APQP_GZYJ" id="com.connor.dataset.test.menus.sampleCommand.APQP_GZYJ"> </command>
+           			<command commandId="APQP_HSCPPAP" id="com.connor.dataset.test.menus.sampleCommand.APQP_HSCPPAP"> </command>
+           			<command commandId="APQP_HSCPPAP_1" id="com.connor.dataset.test.menus.sampleCommand.APQP_HSCPPAP_1"> </command>
+           			<command commandId="APQP_HSC" id="com.connor.dataset.test.menus.sampleCommand.APQP_HSC"> </command>
+           			<command commandId="APQP_HSC_1" id="com.connor.dataset.test.menus.sampleCommand.APQP_HSC_1"> </command>
+           			<command commandId="APQP_HSCZZ"	id="com.connor.dataset.test.menus.sampleCommand.APQP_HSCZZ"> </command>
+           			<command commandId="APQP_HSCZZ_1"	id="com.connor.dataset.test.menus.sampleCommand.APQP_HSCZZ_1"> </command>
+           			<command commandId="APQP_HSCWG" id="com.connor.dataset.test.menus.sampleCommand.APQP_HSCWG"> </command>
+           			<command commandId="APQP_JMCY" id="com.connor.dataset.test.menus.sampleCommand.APQP_JMCY"> </command>
+           			<command commandId="APQP_YYZC_T_QX" id="com.connor.dataset.test.menus.sampleCommand.APQP_YYZC_T_QX"> </command>
+           			<command commandId="APQP_YYZC_T_GX" id="com.connor.dataset.test.menus.sampleCommand.APQP_YYZC_T_GX"> </command>
+           			<command commandId="APQP_YYZC_W_QX" id="com.connor.dataset.test.menus.sampleCommand.APQP_YYZC_W_QX"> </command>
+           			<command commandId="APQP_YYZC_W_GX" id="com.connor.dataset.test.menus.sampleCommand.APQP_YYZC_W_GX"> </command>
+           			<command commandId="APQP_ZJCGXYCP" id="com.connor.dataset.test.menus.sampleCommand.APQP_ZJCGXYCP"> </command>
+           			
+            </menu>
+           
+           <command commandId="HX3_WTD" id="com.connor.dataset.test.menus.sampleCommand.HX3_WTD"> </command>
+         
+         </menu>
+         <!--产品设计菜单-->
+         <menu label="产品设计"
+               mnemonic="M"
+               id="com.connor.hx3.plm.menus.cpdesign_id">
+               <command 
+               		commandId="cn.com.origin.autocode.handlers.AutoCodeNewItemFilterTypeHandler" 
+               		label="新建产品图纸"
+               		> 
+               </command>
+               <command 
+               		commandId="OtherDwg" 
+               		label="新建其他图纸"
+               		
+               		id="com.connor.hx3.plm.hxom002.AutocodeHandler.ohterDWG_id"> 
+               		<!-->
+               		<visibleWhen>        
+                    	<and>
+                    	<reference
+                             definitionId="com.teamcenter.rac.ui.inMainPerspective">
+                       	</reference>
+                       	
+                       	<iterate ifEmpty="false">
+                            <adapt type="com.teamcenter.rac.kernel.TCComponent">
+                                <or>
+                                	<test 
+                                    	property="com.teamcenter.rac.kernel.TCComponent.property" 
+                                   		args="object_type" value="MSWordX"> 
+                                	</test>
+                                	<test 
+                                    	property="com.teamcenter.rac.kernel.TCComponent.property" 
+                                   		args="object_type" value="%msWordx.Type">
+                                	</test>
+                                </or>   
+                            </adapt>
+                        </iterate>
+                        <with
+                             variable="rac_command_suppression">
+                          <not>
+                             <iterate
+                                   operator="or">
+                                <equals
+                                      value="composeDHPAssm">
+                                </equals>
+                             </iterate>
+                          </not>
+                       </with>            
+                    </and>               
+                 </visibleWhen>
+                 <!-->
+               </command>
+               <command 
+               		commandId="BomExchange" 
+               		label="设计BOM转物料BOM"
+               		id="com.connor.dataset.test.menus.sampleCommand.APQP_JMCY"> 
+               </command>
+                <command 
+               		commandId="HX3_SJFFDX" 
+               		label="新建图纸下发/外发清单"
+               		id="com.connor.dataset.test.menus.sampleCommand.APQP_JMCY"> 
+               </command>
+                <command 
+               		commandId="cn.com.origin.autocode.handlers.ORItemSaveAsHandler" 
+               		label="通过编码器另存"
+               		> 
+               </command>
+               <command 
+               		commandId="HX3_GYLX" 
+               		label="新建工艺路线"
+               		> 
+               </command>
+               
+         </menu>
+         <!--新添加20170504添加新建物料-->
+         <menu label="新建/另存物料"
+               mnemonic="M"
+               id="com.connor.hx3.plm.menus.wuliaodesign_id">
+               <command 
+               		commandId="cn.com.origin.autocode.handlers.AutoCodeNewItemByTypeHandler" 
+               		label="新建物料"
+               		> 
+               		<visibleWhen>        
+                    	<and>
+                    	<reference
+                             definitionId="com.teamcenter.rac.ui.inMainPerspective">
+                       	</reference>
+                       	
+                       	<iterate ifEmpty="false">
+                            <adapt type="com.teamcenter.rac.kernel.TCComponent">
+                                <or>
+                                	<test 
+                                    	property="com.teamcenter.rac.kernel.TCComponent.property" 
+                                   		args="object_type" value="HX3_ZPTRevision"> 
+                                	</test>
+                                	<test 
+                                    	property="com.teamcenter.rac.kernel.TCComponent.property" 
+                                   		args="object_type" value="ZPT Revision">
+                                	</test>
+                                	<test 
+                                    	property="com.teamcenter.rac.kernel.TCComponent.property" 
+                                   		args="object_type" value="装配图版本">
+                                	</test>
+                                	<test 
+                                    	property="com.teamcenter.rac.kernel.TCComponent.property" 
+                                   		args="object_type" value="HX3_LJTRevision"> 
+                                	</test>
+                                	<test 
+                                    	property="com.teamcenter.rac.kernel.TCComponent.property" 
+                                   		args="object_type" value="LJT Revision">
+                                	</test>
+                                	<test 
+                                    	property="com.teamcenter.rac.kernel.TCComponent.property" 
+                                   		args="object_type" value="零件图版本">
+                                	</test>
+                                </or>   
+                            </adapt>
+                        </iterate>
+                        <with
+                             variable="rac_command_suppression">
+                          <not>
+                             <iterate
+                                   operator="or">
+                                <equals
+                                      value="cn.com.origin.autocode.handlers.AutoCodeNewItemHandler">
+                                </equals>
+                             </iterate>
+                          </not>
+                       </with>            
+                    </and>               
+                 </visibleWhen>
+               </command>
+               <command 
+               		commandId="cn.com.origin.autocode.handlers.ORItemSaveAsHandler" 
+               		label="另存物料"
+               		> 
+               		<visibleWhen>        
+                    	<and>
+                    	<reference
+                             definitionId="com.teamcenter.rac.ui.inMainPerspective">
+                       	</reference>
+                       	
+                       	<iterate ifEmpty="false">
+                            <adapt type="com.teamcenter.rac.kernel.TCComponent">
+                                <or>
+                                	<test 
+                                    	property="com.teamcenter.rac.kernel.TCComponent.property" 
+                                   		args="object_type" value="HX3_WLRevision"> 
+                                	</test>
+                                	<test 
+                                    	property="com.teamcenter.rac.kernel.TCComponent.property" 
+                                   		args="object_type" value="WL Revision">
+                                	</test>
+                                	<test 
+                                    	property="com.teamcenter.rac.kernel.TCComponent.property" 
+                                   		args="object_type" value="物料版本">
+                                	</test>
+                                	
+                                	
+                                </or>   
+                            </adapt>
+                        </iterate>
+                        <with
+                             variable="rac_command_suppression">
+                          <not>
+                             <iterate
+                                   operator="or">
+                                <equals
+                                      value="cn.com.origin.autocode.handlers.AutoCodeNewItemHandler">
+                                </equals>
+                             </iterate>
+                          </not>
+                       </with>            
+                    </and>               
+                 </visibleWhen>
+               </command>
+               
+         </menu>
+         	<!-- 定义menu    报表!-->
+            <menu label="报表"
+               mnemonic="M"
+               id="com.connor.hx3.plm.menus.sampleMenu.baobiao">
+               <command	commandId="HXOM027_WTTJ" id="com.connor.dataset.test.menus.sampleCommand.HXOM027_WTTJ"> </command>
+           	   <command	commandId="HXOM030_KHDH" id="com.connor.dataset.test.menus.sampleCommand.HXOM030_KHDH"> </command>
+           	   <command	commandId="HXOM029_TZWF" id="com.connor.dataset.test.menus.sampleCommand.HXOM029_TZWF"> </command>
+           	   <command commandId="HX_GetDB"  id="HX_GetDB.id" style="push">
+                    <visibleWhen>
+                    <with variable="rac_command_suppression">
+                        <not>
+                            <iterate operator="or">
+                                <equals value="HX_GetDB"/>
+                            </iterate>
+                        </not>
+                    </with>
+                 </visibleWhen>
+              </command>
+              <command commandId="HX_QTXJC"  id="HX_QTXJC.id" style="push">
+                    <visibleWhen>
+                    <with variable="rac_command_suppression">
+                        <not>
+                            <iterate operator="or">
+                                <equals value="HX_QTXJC"/>
+                            </iterate>
+                        </not>
+                    </with>
+                 </visibleWhen>
+              </command>
+             <!--EXPORT_BG_REPORT-->
+              <command commandId="EXPORT_BG_REPORT"  id="EXPORT_BG_REPORT.id" style="push">
+                    <visibleWhen>
+                    <with variable="rac_command_suppression">
+                        <not>
+                            <iterate operator="or">
+                                <equals value="EXPORT_BG_REPORT"/>
+                            </iterate>
+                        </not>
+                    </with>
+                 </visibleWhen>
+              </command>
+              <command commandId="EXPORT_TZXF_REPORT"  id="EXPORT_TZXF_REPORT.id" style="push">
+                    <visibleWhen>
+                    <with variable="rac_command_suppression">
+                        <not>
+                            <iterate operator="or">
+                                <equals value="EXPORT_TZXF_REPORT"/>
+                            </iterate>
+                        </not>
+                    </with>
+                 </visibleWhen>
+              </command>
+              
+               <command	commandId="ClassReportCommand" id="com.connor.dataset.test.menus.sampleCommand.ClassReportCommand"> </command>
+           	 
+         </menu>
+            
+          <!-- 定义menu    评审点管理!-->   
+        <menu label="评审点管理"
+               mnemonic="M"
+               id="com.connor.hx3.plm.menus.sampleMenu.pingshen">
+               
+                <command commandId="HXOM016_XMWTTJ" id="com.connor.dataset.test.menus.sampleCommand.HXOM016_XMWTTJ"> </command>
+              <menu
+               		label="计划和确定项目阶段评审"
+               		mnemonic="M"
+               		id="com.connor.hx3.plm.menus.sampleMenu.JHQDXMJDPS">
+                	<command commandId="HXOM015_JFJDJ" id="com.connor.dataset.test.menus.sampleCommand.HXOM015_JFJDJ"> </command>
+           			<command commandId="HX3_JHQDXMJDPS" id="com.connor.dataset.test.menus.sampleCommand.JHQDXMJDPS.ID"> </command>
+        	  		<command commandId="HX3_DYJDPS_YY" id="com.connor.dataset.test.menus.sampleCommand.HX3_DYJDPS_YY.ID"> </command>
+        
+        	  	</menu>
+        	  	
+        	  	<menu
+               		label="设计输入评审"
+               		mnemonic="M"
+               		id="com.connor.hx3.plm.menus.sampleMenu.HX3_SJSRPSB">
+           			<command commandId="HX3_SJSRPSB" id="com.connor.dataset.test.menus.sampleCommand.HX3_SJSRPSB"> </command>
+        	  		<command commandId="HX3_SJSRPS_YY" id="com.connor.dataset.test.menus.sampleCommand.HX3_SJSRPS_YY"> </command>
+        	 
+        	  	</menu>
+              
+              <menu
+               		label="设计输出评审"
+               		mnemonic="M"
+               		id="com.connor.hx3.plm.menus.sampleMenu.HX3_SJSCPSB">
+           			<command commandId="HX3_SJSCPSB" id="com.connor.dataset.test.menus.sampleCommand.HX3_SJSCPSB"> </command>
+        	  		<command commandId="HX3_SJSCPS_YY" id="com.connor.dataset.test.menus.sampleCommand.HX3_SJSCPS_YY"> </command>
+        	  	
+        	  	</menu>
+              
+              <menu
+               		label="设计验证评审"
+               		mnemonic="M"
+               		id="com.connor.hx3.plm.menus.sampleMenu.HX3_SJYZPSB">
+           			<command commandId="HX3_SJYZPSB" id="com.connor.dataset.test.menus.sampleCommand.HX3_SJYZPSB"> </command>
+        	  		<command commandId="HX3_SJYZPS_YY" id="com.connor.dataset.test.menus.sampleCommand.HX3_SJYZPS_YY"> </command>
+        	  
+        	  	</menu>
+              
+              <menu
+               		label="产品设计和开发阶段评审"
+               		mnemonic="M"
+               		id="com.connor.hx3.plm.menus.sampleMenu.HX3_CPKFJDPSBG">
+                	<command commandId="HXOM015_JFJDJ" id="com.connor.dataset.test.menus.sampleCommand.HXOM015_JFJDJ"> </command>
+           			<command commandId="HX3_CPKFJDPSBG" id="com.connor.dataset.test.menus.sampleCommand.HX3_CPKFJDPSBG"> </command>
+        	  		<command commandId="HX3_DEJDPS_YY" id="com.connor.dataset.test.menus.sampleCommand.HX3_DEJDPS_YY"> </command>
+        	  
+        	  	</menu>
+        	  	
+        	  	<menu
+               		label="过程设计和开发阶段评审"
+               		mnemonic="M"
+               		id="com.connor.hx3.plm.menus.sampleMenu.HX3_GCSJKFJDPS">
+                	<command commandId="HXOM015_JFJDJ" id="com.connor.dataset.test.menus.sampleCommand.HXOM015_JFJDJ"> </command>
+           			<command commandId="HX3_GCSJKFJDPS" id="com.connor.dataset.test.menus.sampleCommand.HX3_GCSJKFJDPS"> </command>
+        	  		<command commandId="HX3_DSJDPS_YY" id="com.connor.dataset.test.menus.sampleCommand.HX3_DSJDPS_YY"> </command>
+        	  	
+        	  	</menu>
+        	  	
+        	  	<menu
+               		label="产品过程生产确认评审"
+               		mnemonic="M"
+               		id="com.connor.hx3.plm.menus.sampleMenu.HX3_CPGCSCQRPS">
+               		<!-->
+                	<command commandId="HXOM015_JFJDJ" id="com.connor.dataset.test.menus.sampleCommand.HXOM015_JFJDJ"> </command>
+           			<!-->
+           			<command commandId="HX3_CPGCSCQRPS" id="com.connor.dataset.test.menus.sampleCommand.HX3_CPGCSCQRPS"> </command>
+        	  		<command commandId="HX3_CPGCSCQR_YY" id="com.connor.dataset.test.menus.sampleCommand.HX3_CPGCSCQR_YY"> </command>
+        	  
+        	  	</menu>
+        	  	
+        	  	<menu
+               		label="质量策划认定和管理者支持"
+               		mnemonic="M"
+               		id="com.connor.hx3.plm.menus.sampleMenu.HX3_CPGCQRJDPS">
+               		
+               		<command commandId="HXOM015_JFJDJ" id="com.connor.dataset.test.menus.sampleCommand.HXOM015_JFJDJ"> </command>
+           		
+                	<command commandId="HX3_CPGCQRJDPS" id="com.connor.dataset.test.menus.sampleCommand.HX3_CPGCQRJDPS22"> </command>
+           			<command commandId="HX3_DSIJDPS_YY" id="com.connor.dataset.test.menus.sampleCommand.HX3_DSIJDPS_YY"> </command>
+        	  	</menu>
+        	  	
+        	  	<menu
+               		label="项目定点"
+               		mnemonic="M"
+               		id="com.connor.hx3.plm.menus.sampleMenu.HX3_XMDDPSBG">
+                	<command commandId="HXOM015_JFJDJ" id="com.connor.dataset.test.menus.sampleCommand.HXOM015_JFJDJ"> </command>
+           			<command commandId="HX3_XMDDPSBG" id="com.connor.dataset.test.menus.sampleCommand.HX3_XMDDPSBG"> </command>
+        	  		<command commandId="HX3_XMDDPS_YY" id="com.connor.dataset.test.menus.sampleCommand.HX3_XMDDPS_YY"> </command>
+        	  	
+        	  	</menu>
+              
+               	<menu
+               		label="OTS样件评审"
+               		mnemonic="M"
+               		id="com.connor.hx3.plm.menus.sampleMenu.OTS_YJPS">
+                	<command commandId="HXOM015_JFJDJ" id="com.connor.dataset.test.menus.sampleCommand.HXOM015_JFJDJ"> </command>
+           			<command commandId="HX3_OTSSYPSBG" id="com.connor.dataset.test.menus.sampleCommand.HX3_OTSSYPSBG"> </command>
+        	  		<command commandId="HX3_OTSYJPS_YY" id="com.connor.dataset.test.menus.sampleCommand.HX3_OTSYJPS_YY"> </command> 	
+        	  	</menu>
+        	  	
+        	  	<menu
+               		label="项目移交与总结"
+               		mnemonic="M"
+               		id="com.connor.hx3.plm.menus.sampleMenu.HX3_XMYJPSBG">
+                	<command commandId="HXOM015_JFJDJ" id="com.connor.dataset.test.menus.sampleCommand.HXOM015_JFJDJ"> </command>
+           			<command commandId="HX3_XMYJPSBG" id="com.connor.dataset.test.menus.sampleCommand.HX3_XMYJPSBG"> </command>
+        	  		<command commandId="HX3_XMYJPS_YY" id="com.connor.dataset.test.menus.sampleCommand.HX3_XMYJPS_YY"> </command>
+        	  	</menu>
+        	  	
+         </menu>
+      </menuContribution>
+      
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="com.connor.hx3.plm.toolbars.sampleToolbar">
+            <command
+                  commandId="Test_GYT"
+                  icon="icons/sample.gif"
+                  tooltip="创建工艺图"
+                  id="com.connor.hx3.plm.toolbars.sampleComman.Test_GYT">
+            </command>
+         </toolbar>
+      </menuContribution>
+      
+   </extension>
+
+</plugin>
